@@ -22,7 +22,7 @@
 
 🔗 **Backend API:** https://retainiq-backend-gmqx.onrender.com/
 
-🎨 **Frontend App:** https://retain-iq-delta.vercel.app/
+🎨 **Frontend App:** https://retain-1toxr7r12-keerthanalahari2-4968s-projects.vercel.app
 
 📦 **Full Repository:** https://github.com/keerthana911-netizen/RetainIQ
 
