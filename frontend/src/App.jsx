@@ -39,7 +39,7 @@ function App() {
   const COLORS = ["#ff4d4f", "#00C49F"];
 
   return (
-    <div className="app">
+    <div className="container">
       <h1>RetainIQ Dashboard</h1>
 
       <button onClick={predictRisk}>
@@ -48,29 +48,33 @@ function App() {
 
       {result && (
         <>
-          <h2>Risk Score: {result.risk_score}%</h2>
-          <h3>{result.risk_level}</h3>
+          <div className="result">
+            <h2>Risk Score: {result.risk_score}%</h2>
+            <h3>{result.risk_level}</h3>
+          </div>
 
-          <PieChart width={400} height={300}>
-            <Pie
-              data={chartData}
-              cx="50%"
-              cy="50%"
-              outerRadius={100}
-              dataKey="value"
-              label
-            >
-              {chartData.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={COLORS[index % COLORS.length]}
-                />
-              ))}
-            </Pie>
+          <div className="chart-container">
+            <PieChart width={400} height={300}>
+              <Pie
+                data={chartData}
+                cx="50%"
+                cy="50%"
+                outerRadius={100}
+                dataKey="value"
+                label
+              >
+                {chartData.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
+                ))}
+              </Pie>
 
-            <Tooltip />
-            <Legend />
-          </PieChart>
+              <Tooltip />
+              <Legend />
+            </PieChart>
+          </div>
         </>
       )}
     </div>
