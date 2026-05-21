@@ -14,15 +14,18 @@
 <br/>
 
 ![Status](https://img.shields.io/badge/Status-Fullstack%20Prototype-brightgreen?style=for-the-badge)
-![ML](https://img.shields.io/badge/ML-Scikit--Learn-orange?style=for-the-badge\&logo=python)
-![Frontend](https://img.shields.io/badge/Frontend-React-blue?style=for-the-badge\&logo=react)
-![Backend](https://img.shields.io/badge/Backend-Flask-black?style=for-the-badge\&logo=flask)
+![ML](https://img.shields.io/badge/ML-Scikit--Learn-orange?style=for-the-badge&logo=python)
+![Frontend](https://img.shields.io/badge/Frontend-React-blue?style=for-the-badge&logo=react)
+![Backend](https://img.shields.io/badge/Backend-Flask-black?style=for-the-badge&logo=flask)
 
 <br/>
 
-🔗 **Backend API:** https://github.com/keerthana911-netizen/RetainIQ/tree/main/backend
-🎨 **Frontend App:** https://github.com/keerthana911-netizen/RetainIQ/tree/main/frontend
+🔗 **Backend API:** https://retainiq-backend-gmqx.onrender.com/
+
+🎨 **Frontend App:** https://retain-iq-iota.vercel.app/
+
 📦 **Full Repository:** https://github.com/keerthana911-netizen/RetainIQ
+
 📓 **Model Notebook:** https://github.com/keerthana911-netizen/RetainIQ/tree/main/model
 
 </div>
@@ -32,6 +35,7 @@
 ## 🔥 Problem Statement
 
 Employee attrition is a major challenge in the IT industry.
+
 Most companies react **after employees leave**, rather than predicting risk early.
 
 **RetainIQ focuses on early prediction and proactive intervention.**
@@ -40,16 +44,16 @@ Most companies react **after employees leave**, rather than predicting risk earl
 
 ## 🧠 What This Project Does
 
-* Predicts employee attrition probability (0–100%)
-* Classifies risk level: **High / Medium / Low**
-* Provides real-time predictions via API
-* Interactive frontend for user input
+- Predicts employee attrition probability (0–100%)
+- Classifies risk level: **High / Medium / Low**
+- Provides real-time predictions via API
+- Interactive frontend for user input
 
 ---
 
 ## 🏗️ Architecture
 
-```
+```text
 Frontend (React)
         ↓
 Fetch API (POST request)
@@ -67,10 +71,10 @@ Displayed in UI
 
 ## 📊 Model Performance
 
-* Accuracy: **85.26%**
-* Model: Logistic Regression (L1 Regularization)
-* Dataset: IBM HR Analytics (Kaggle)
-* Class Distribution: ~84% stay / ~16% leave
+- Accuracy: **85.26%**
+- Model: Logistic Regression (L1 Regularization)
+- Dataset: IBM HR Analytics (Kaggle)
+- Class Distribution: ~84% stay / ~16% leave
 
 ---
 
@@ -78,27 +82,28 @@ Displayed in UI
 
 ### 🧠 Machine Learning
 
-* Python
-* Pandas
-* Scikit-learn
+- Python
+- Pandas
+- Scikit-learn
 
 ### ⚙️ Backend
 
-* Flask
-* REST API (`/predict`)
-* JSON handling
+- Flask
+- REST API (`/predict`)
+- JSON handling
 
 ### 🎨 Frontend
 
-* React (Vite)
-* useState
-* Fetch API
+- React (Vite)
+- useState
+- Fetch API
+- Recharts
 
 ---
 
 ## 📊 Sample API
 
-### Request:
+### Request
 
 ```json
 {
@@ -108,7 +113,7 @@ Displayed in UI
 }
 ```
 
-### Response:
+### Response
 
 ```json
 {
@@ -121,30 +126,33 @@ Displayed in UI
 
 ## 🚀 Current Features
 
-* [x] ML model trained on HR dataset
-* [x] Flask API for predictions
-* [x] React frontend UI
-* [x] User input form
-* [x] Real-time prediction display
+- [x] ML model trained on HR dataset
+- [x] Flask API for predictions
+- [x] React frontend UI
+- [x] User input form
+- [x] Real-time prediction display
+- [x] Live deployment on Render
+- [x] Live frontend deployment on Vercel
 
 ---
 
 ## 🚧 In Progress
 
-* [ ] Dashboard analytics (charts)
-* [ ] Model explainability (feature importance)
-* [ ] Deployment (Vercel + Render)
+- [ ] Dashboard analytics
+- [ ] SHAP explainability
+- [ ] Department-level cohort analytics
+- [ ] Authentication system
 
 ---
 
 ## 📁 Dataset
 
-This project uses the **IBM HR Analytics Employee Attrition & Performance dataset**
-provided on Kaggle by:
+This project uses the **IBM HR Analytics Employee Attrition & Performance dataset** provided on Kaggle by:
 
 **Fares Sayah**
 
-Dataset source:
+Dataset Source:
+
 https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset
 
 ---
@@ -163,15 +171,15 @@ https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset
 
 I wanted to build a project that:
 
-* Solves a real-world problem
-* Combines ML + full-stack development
-* Demonstrates end-to-end system design
+- Solves a real-world problem
+- Combines ML + full-stack development
+- Demonstrates end-to-end system design
 
 ---
 
 ## 👩‍💻 Author
 
-**Keerthana**
+**Keerthana**  
 First-Year CSE Student | ML + Full Stack Learner
 
 🔗 GitHub: https://github.com/keerthana911-netizen
