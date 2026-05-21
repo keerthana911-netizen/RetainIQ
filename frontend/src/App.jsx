@@ -13,17 +13,20 @@ function App() {
   const [result, setResult] = useState(null);
 
   const predictRisk = async () => {
-    const response = await fetch("http://127.0.0.1:5000/predict", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        Age: 18,
-        MonthlyIncome: 90000,
-        OverTime_Yes: 1,
-      }),
-    });
+    const response = await fetch(
+      "https://retainiq-backend-gmqx.onrender.com/predict",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          Age: 18,
+          MonthlyIncome: 90000,
+          OverTime_Yes: 1,
+        }),
+      }
+    );
 
     const data = await response.json();
     setResult(data);
