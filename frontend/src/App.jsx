@@ -77,7 +77,7 @@ export default function App() {
             </div>
             <EmployeeForm schema={schema} employee={employee} onChange={(e) => { setEmployee(e); setPersona('') }} />
           </section>
-          <section className="card">
+          <section className="card result-first">
             <h2>Attrition risk</h2>
             {result ? (
               <>

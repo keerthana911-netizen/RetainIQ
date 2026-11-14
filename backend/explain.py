@@ -49,7 +49,7 @@ def display_value(feature: str, value):
     if isinstance(value, (int, float, np.integer, np.floating)):
         value = float(value)
         return f"{value:,.0f}" if value == int(value) else f"{value:,.1f}"
-    return str(value)
+    return str(value).replace("_", " ")
 
 
 class RiskExplainer:

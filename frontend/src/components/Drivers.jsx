@@ -40,8 +40,8 @@ export default function Drivers({ explanation }) {
         </BarChart>
       </ResponsiveContainer>
       <p className="muted small">
-        Average employee: {explanation.base_risk}% → this employee: {explanation.final_risk}%.
-        Bars are SHAP contributions in log-odds; hover for the odds multiplier.
+        An employee with a typical profile starts at {explanation.base_risk.toFixed(1)}%; the factors above move this
+        employee to {explanation.final_risk.toFixed(1)}%. Bars are SHAP contributions (log-odds); hover for the odds multiplier.
         {explanation.other_features.count > 0 && ` ${explanation.other_features.count} smaller factors are not shown.`}
       </p>
     </div>

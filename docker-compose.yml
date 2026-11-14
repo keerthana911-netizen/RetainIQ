@@ -1,0 +1,15 @@
+# docker compose up --build   ->  http://localhost:8080
+services:
+  backend:
+    build: ./backend
+    ports: ["8000:8000"]          # API + /health directly, handy for curl
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request as u; u.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      retries: 6
+      start_period: 30s
+  frontend:
+    build: ./frontend
+    ports: ["8080:80"]
+    depends_on:
+      backend: { condition: service_healthy }

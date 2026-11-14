@@ -10,7 +10,7 @@ nav button.on { background: var(--red); color: #fff; }
 .card h2 { font-size: 1.05rem; } .card h3 { font-size: .95rem; margin-top: 18px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 16px; align-items: start; }
 .stack { display: grid; gap: 16px; }
-@media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } .result-first { order: -1; } }
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; margin: 12px 0; }
 .grid.one { grid-template-columns: 1fr; }
 @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }

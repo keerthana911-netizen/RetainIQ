@@ -1,0 +1,14 @@
+# Render Blueprint: deploys the API from the Dockerfile.
+# The frontend stays on Vercel (root directory: frontend) with env var
+#   VITE_API_URL = https://<this-service>.onrender.com
+services:
+  - type: web
+    name: retainiq-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGINS        # tighten to your Vercel domain once known
+        value: "*"

@@ -8,12 +8,14 @@ const LEVERS = ['OverTime', 'MonthlyIncome', 'StockOptionLevel', 'BusinessTravel
   'JobSatisfaction', 'YearsSinceLastPromotion', 'TrainingTimesLastYear']
 const CURVES = ['MonthlyIncome', 'YearsSinceLastPromotion', 'DistanceFromHome', 'TotalWorkingYears', 'YearsAtCompany']
 
+const label = (f, v) => f.options?.find((o) => String(o.value) === String(v))?.label ?? v
+
 function Lever({ f, current, value, onChange }) {
   const changed = value !== undefined && value !== current
   const v = value ?? current
   return (
     <label className={`field lever ${changed ? 'changed' : ''}`}>
-      <span>{f.label}<em>{changed ? `${current} → ${v}` : `${current}`}</em></span>
+      <span>{f.label}<em>{changed ? `${label(f, current)} → ${label(f, v)}` : `${label(f, current)}`}</em></span>
       {f.type === 'number' ? (
         <input type="range" min={f.min} max={f.max} step={f.step} value={v} onChange={(e) => onChange(Number(e.target.value))} />
       ) : (
