@@ -1,0 +1,429 @@
+{
+  "dataset": {
+    "rows": 1470,
+    "attrition_rate": 0.1612,
+    "train_rows": 1176,
+    "test_rows": 294,
+    "test_positives": 47,
+    "source": "IBM HR Analytics Employee Attrition (fictional, synthetic)"
+  },
+  "majority_baseline_accuracy": 0.8401,
+  "excluded_sensitive_features": [
+    "Gender",
+    "MaritalStatus",
+    "Age"
+  ],
+  "models": {
+    "Baseline (always 'stays')": {
+      "test": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.16,
+        "accuracy": 0.84,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "note": "High accuracy, zero leavers caught: why accuracy alone is misleading here."
+    },
+    "Logistic Regression": {
+      "best_params": {
+        "penalty": "l2",
+        "C": 0.1
+      },
+      "cv": {
+        "roc_auc": [
+          0.824,
+          0.031
+        ],
+        "pr_auc": [
+          0.612,
+          0.053
+        ],
+        "precision": [
+          0.37,
+          0.026
+        ],
+        "recall": [
+          0.744,
+          0.058
+        ],
+        "f1": [
+          0.493,
+          0.025
+        ]
+      },
+      "test": {
+        "roc_auc": 0.796,
+        "roc_auc_ci95": [
+          0.719,
+          0.871
+        ],
+        "pr_auc": 0.593,
+        "pr_auc_ci95": [
+          0.454,
+          0.72
+        ],
+        "at_threshold_0.5": {
+          "precision": 0.365,
+          "recall": 0.66,
+          "f1": 0.47,
+          "flagged_pct": 28.9
+        },
+        "at_recall_oriented_threshold": {
+          "precision": 0.392,
+          "recall": 0.66,
+          "f1": 0.492,
+          "flagged_pct": 26.9
+        },
+        "at_balanced_threshold": {
+          "precision": 0.595,
+          "recall": 0.468,
+          "f1": 0.524,
+          "flagged_pct": 12.6
+        }
+      },
+      "thresholds_from_oof": {
+        "recall_oriented_F2": 0.524,
+        "balanced_F1": 0.702
+      },
+      "imbalance_ablation": {
+        "with_class_weight": {
+          "cv_roc_auc": [
+            0.824,
+            0.031
+          ],
+          "cv_pr_auc": [
+            0.612,
+            0.053
+          ],
+          "cv_recall@0.5": [
+            0.744,
+            0.058
+          ],
+          "cv_precision@0.5": [
+            0.37,
+            0.026
+          ],
+          "test@0.5": {
+            "precision": 0.365,
+            "recall": 0.66,
+            "f1": 0.47,
+            "flagged_pct": 28.9
+          }
+        },
+        "without_class_weight": {
+          "cv_roc_auc": [
+            0.829,
+            0.033
+          ],
+          "cv_pr_auc": [
+            0.631,
+            0.056
+          ],
+          "cv_recall@0.5": [
+            0.358,
+            0.073
+          ],
+          "cv_precision@0.5": [
+            0.796,
+            0.093
+          ],
+          "test@0.5": {
+            "precision": 0.824,
+            "recall": 0.298,
+            "f1": 0.438,
+            "flagged_pct": 5.8
+          }
+        }
+      }
+    },
+    "Random Forest": {
+      "best_params": {
+        "n_estimators": 500,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "max_depth": 8
+      },
+      "cv": {
+        "roc_auc": [
+          0.789,
+          0.032
+        ],
+        "pr_auc": [
+          0.535,
+          0.043
+        ],
+        "precision": [
+          0.484,
+          0.058
+        ],
+        "recall": [
+          0.488,
+          0.065
+        ],
+        "f1": [
+          0.483,
+          0.049
+        ]
+      },
+      "test": {
+        "roc_auc": 0.775,
+        "roc_auc_ci95": [
+          0.682,
+          0.857
+        ],
+        "pr_auc": 0.429,
+        "pr_auc_ci95": [
+          0.308,
+          0.577
+        ],
+        "at_threshold_0.5": {
+          "precision": 0.439,
+          "recall": 0.532,
+          "f1": 0.481,
+          "flagged_pct": 19.4
+        },
+        "at_recall_oriented_threshold": {
+          "precision": 0.278,
+          "recall": 0.787,
+          "f1": 0.411,
+          "flagged_pct": 45.2
+        },
+        "at_balanced_threshold": {
+          "precision": 0.449,
+          "recall": 0.66,
+          "f1": 0.534,
+          "flagged_pct": 23.5
+        }
+      },
+      "thresholds_from_oof": {
+        "recall_oriented_F2": 0.325,
+        "balanced_F1": 0.464
+      },
+      "imbalance_ablation": {
+        "with_class_weight": {
+          "cv_roc_auc": [
+            0.789,
+            0.032
+          ],
+          "cv_pr_auc": [
+            0.535,
+            0.043
+          ],
+          "cv_recall@0.5": [
+            0.488,
+            0.065
+          ],
+          "cv_precision@0.5": [
+            0.484,
+            0.058
+          ],
+          "test@0.5": {
+            "precision": 0.439,
+            "recall": 0.532,
+            "f1": 0.481,
+            "flagged_pct": 19.4
+          }
+        },
+        "without_class_weight": {
+          "cv_roc_auc": [
+            0.795,
+            0.032
+          ],
+          "cv_pr_auc": [
+            0.538,
+            0.045
+          ],
+          "cv_recall@0.5": [
+            0.109,
+            0.038
+          ],
+          "cv_precision@0.5": [
+            0.914,
+            0.108
+          ],
+          "test@0.5": {
+            "precision": 0.5,
+            "recall": 0.064,
+            "f1": 0.113,
+            "flagged_pct": 2.0
+          }
+        }
+      }
+    },
+    "XGBoost": {
+      "best_params": {
+        "subsample": 0.7,
+        "reg_lambda": 1,
+        "n_estimators": 500,
+        "min_child_weight": 1,
+        "max_depth": 2,
+        "learning_rate": 0.03,
+        "colsample_bytree": 0.6
+      },
+      "cv": {
+        "roc_auc": [
+          0.816,
+          0.028
+        ],
+        "pr_auc": [
+          0.609,
+          0.049
+        ],
+        "precision": [
+          0.448,
+          0.037
+        ],
+        "recall": [
+          0.639,
+          0.07
+        ],
+        "f1": [
+          0.524,
+          0.037
+        ]
+      },
+      "test": {
+        "roc_auc": 0.805,
+        "roc_auc_ci95": [
+          0.715,
+          0.883
+        ],
+        "pr_auc": 0.581,
+        "pr_auc_ci95": [
+          0.442,
+          0.722
+        ],
+        "at_threshold_0.5": {
+          "precision": 0.412,
+          "recall": 0.596,
+          "f1": 0.487,
+          "flagged_pct": 23.1
+        },
+        "at_recall_oriented_threshold": {
+          "precision": 0.384,
+          "recall": 0.702,
+          "f1": 0.496,
+          "flagged_pct": 29.3
+        },
+        "at_balanced_threshold": {
+          "precision": 0.413,
+          "recall": 0.66,
+          "f1": 0.508,
+          "flagged_pct": 25.5
+        }
+      },
+      "thresholds_from_oof": {
+        "recall_oriented_F2": 0.437,
+        "balanced_F1": 0.482
+      },
+      "imbalance_ablation": {
+        "with_class_weight": {
+          "cv_roc_auc": [
+            0.816,
+            0.028
+          ],
+          "cv_pr_auc": [
+            0.609,
+            0.049
+          ],
+          "cv_recall@0.5": [
+            0.639,
+            0.07
+          ],
+          "cv_precision@0.5": [
+            0.448,
+            0.037
+          ],
+          "test@0.5": {
+            "precision": 0.412,
+            "recall": 0.596,
+            "f1": 0.487,
+            "flagged_pct": 23.1
+          }
+        },
+        "without_class_weight": {
+          "cv_roc_auc": [
+            0.83,
+            0.03
+          ],
+          "cv_pr_auc": [
+            0.625,
+            0.045
+          ],
+          "cv_recall@0.5": [
+            0.333,
+            0.051
+          ],
+          "cv_precision@0.5": [
+            0.786,
+            0.069
+          ],
+          "test@0.5": {
+            "precision": 0.833,
+            "recall": 0.319,
+            "f1": 0.462,
+            "flagged_pct": 6.1
+          }
+        }
+      }
+    }
+  },
+  "champion": "Logistic Regression",
+  "champion_rule": "Highest repeated-CV ROC-AUC among models with exact SHAP log-odds attribution (Logistic Regression, XGBoost). Best CV ROC-AUC overall: Logistic Regression.",
+  "sensitive_feature_ablation": {
+    "excluded": [
+      "Gender",
+      "MaritalStatus",
+      "Age"
+    ],
+    "cv_roc_auc_without": [
+      0.824,
+      0.031
+    ],
+    "cv_roc_auc_with": [
+      0.829,
+      0.031
+    ]
+  },
+  "champion_calibration": {
+    "brier_test_raw": 0.159,
+    "brier_test_calibrated": 0.0985,
+    "mean_predicted_test": 0.1513,
+    "observed_test_rate": 0.1599
+  },
+  "risk_bands": {
+    "thresholds": {
+      "watch": 0.187,
+      "high": 0.3512
+    },
+    "oof_train": {
+      "Low": {
+        "share_of_employees_pct": 69.7,
+        "observed_attrition_pct": 5.7
+      },
+      "Medium": {
+        "share_of_employees_pct": 15.7,
+        "observed_attrition_pct": 19.5
+      },
+      "High": {
+        "share_of_employees_pct": 14.5,
+        "observed_attrition_pct": 62.6
+      }
+    },
+    "test": {
+      "Low": {
+        "share_of_employees_pct": 73.1,
+        "observed_attrition_pct": 7.4
+      },
+      "Medium": {
+        "share_of_employees_pct": 14.3,
+        "observed_attrition_pct": 21.4
+      },
+      "High": {
+        "share_of_employees_pct": 12.6,
+        "observed_attrition_pct": 59.5
+      }
+    }
+  }
+}

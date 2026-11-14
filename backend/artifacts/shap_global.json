@@ -1,0 +1,137 @@
+[
+  {
+    "feature": "OverTime",
+    "label": "Works overtime",
+    "mean_abs_shap": 0.6739
+  },
+  {
+    "feature": "TotalWorkingYears",
+    "label": "Total working years",
+    "mean_abs_shap": 0.5124
+  },
+  {
+    "feature": "EnvironmentSatisfaction",
+    "label": "Environment satisfaction",
+    "mean_abs_shap": 0.3831
+  },
+  {
+    "feature": "StockOptionLevel",
+    "label": "Stock option level",
+    "mean_abs_shap": 0.3441
+  },
+  {
+    "feature": "YearsSinceLastPromotion",
+    "label": "Years since last promotion",
+    "mean_abs_shap": 0.3401
+  },
+  {
+    "feature": "JobSatisfaction",
+    "label": "Job satisfaction",
+    "mean_abs_shap": 0.3299
+  },
+  {
+    "feature": "YearsWithCurrManager",
+    "label": "Years with current manager",
+    "mean_abs_shap": 0.3261
+  },
+  {
+    "feature": "JobRole",
+    "label": "Job role",
+    "mean_abs_shap": 0.3261
+  },
+  {
+    "feature": "Department",
+    "label": "Department",
+    "mean_abs_shap": 0.3248
+  },
+  {
+    "feature": "NumCompaniesWorked",
+    "label": "Companies worked at before",
+    "mean_abs_shap": 0.3105
+  },
+  {
+    "feature": "BusinessTravel",
+    "label": "Business travel",
+    "mean_abs_shap": 0.2682
+  },
+  {
+    "feature": "DistanceFromHome",
+    "label": "Distance from home (km)",
+    "mean_abs_shap": 0.2395
+  },
+  {
+    "feature": "JobInvolvement",
+    "label": "Job involvement",
+    "mean_abs_shap": 0.2336
+  },
+  {
+    "feature": "RelationshipSatisfaction",
+    "label": "Relationship satisfaction",
+    "mean_abs_shap": 0.2192
+  },
+  {
+    "feature": "YearsInCurrentRole",
+    "label": "Years in current role",
+    "mean_abs_shap": 0.207
+  },
+  {
+    "feature": "DailyRate",
+    "label": "Daily rate",
+    "mean_abs_shap": 0.2004
+  },
+  {
+    "feature": "MonthlyIncome",
+    "label": "Monthly income (USD)",
+    "mean_abs_shap": 0.1912
+  },
+  {
+    "feature": "PercentSalaryHike",
+    "label": "Last salary hike (%)",
+    "mean_abs_shap": 0.1696
+  },
+  {
+    "feature": "WorkLifeBalance",
+    "label": "Work-life balance",
+    "mean_abs_shap": 0.1532
+  },
+  {
+    "feature": "EducationField",
+    "label": "Education field",
+    "mean_abs_shap": 0.1342
+  },
+  {
+    "feature": "YearsAtCompany",
+    "label": "Years at company",
+    "mean_abs_shap": 0.1336
+  },
+  {
+    "feature": "JobLevel",
+    "label": "Job level",
+    "mean_abs_shap": 0.1313
+  },
+  {
+    "feature": "TrainingTimesLastYear",
+    "label": "Trainings last year",
+    "mean_abs_shap": 0.1096
+  },
+  {
+    "feature": "PerformanceRating",
+    "label": "Performance rating",
+    "mean_abs_shap": 0.0685
+  },
+  {
+    "feature": "HourlyRate",
+    "label": "Hourly rate",
+    "mean_abs_shap": 0.0388
+  },
+  {
+    "feature": "MonthlyRate",
+    "label": "Monthly rate",
+    "mean_abs_shap": 0.0199
+  },
+  {
+    "feature": "Education",
+    "label": "Education level",
+    "mean_abs_shap": 0.0161
+  }
+]

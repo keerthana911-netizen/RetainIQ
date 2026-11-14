@@ -1,0 +1,362 @@
+{
+  "champion": "Logistic Regression",
+  "features": [
+    "DailyRate",
+    "DistanceFromHome",
+    "Education",
+    "EnvironmentSatisfaction",
+    "HourlyRate",
+    "JobInvolvement",
+    "JobLevel",
+    "JobSatisfaction",
+    "MonthlyIncome",
+    "MonthlyRate",
+    "NumCompaniesWorked",
+    "PercentSalaryHike",
+    "PerformanceRating",
+    "RelationshipSatisfaction",
+    "StockOptionLevel",
+    "TotalWorkingYears",
+    "TrainingTimesLastYear",
+    "WorkLifeBalance",
+    "YearsAtCompany",
+    "YearsInCurrentRole",
+    "YearsSinceLastPromotion",
+    "YearsWithCurrManager",
+    "BusinessTravel",
+    "Department",
+    "EducationField",
+    "JobRole",
+    "OverTime"
+  ],
+  "numeric": [
+    "DailyRate",
+    "DistanceFromHome",
+    "Education",
+    "EnvironmentSatisfaction",
+    "HourlyRate",
+    "JobInvolvement",
+    "JobLevel",
+    "JobSatisfaction",
+    "MonthlyIncome",
+    "MonthlyRate",
+    "NumCompaniesWorked",
+    "PercentSalaryHike",
+    "PerformanceRating",
+    "RelationshipSatisfaction",
+    "StockOptionLevel",
+    "TotalWorkingYears",
+    "TrainingTimesLastYear",
+    "WorkLifeBalance",
+    "YearsAtCompany",
+    "YearsInCurrentRole",
+    "YearsSinceLastPromotion",
+    "YearsWithCurrManager"
+  ],
+  "categorical": [
+    "BusinessTravel",
+    "Department",
+    "EducationField",
+    "JobRole",
+    "OverTime"
+  ],
+  "calibration": {
+    "a": 1.1272715352969398,
+    "b": -1.5769982733196863,
+    "method": "Platt scaling on out-of-fold log-odds"
+  },
+  "risk_bands": {
+    "watch": 0.187,
+    "high": 0.3512
+  },
+  "schema": {
+    "numeric": {
+      "DailyRate": {
+        "min": 102.0,
+        "max": 1499.0,
+        "median": 802.0,
+        "integer": true
+      },
+      "DistanceFromHome": {
+        "min": 1.0,
+        "max": 29.0,
+        "median": 7.0,
+        "integer": true
+      },
+      "Education": {
+        "min": 1.0,
+        "max": 5.0,
+        "median": 3.0,
+        "integer": true
+      },
+      "EnvironmentSatisfaction": {
+        "min": 1.0,
+        "max": 4.0,
+        "median": 3.0,
+        "integer": true
+      },
+      "HourlyRate": {
+        "min": 30.0,
+        "max": 100.0,
+        "median": 66.0,
+        "integer": true
+      },
+      "JobInvolvement": {
+        "min": 1.0,
+        "max": 4.0,
+        "median": 3.0,
+        "integer": true
+      },
+      "JobLevel": {
+        "min": 1.0,
+        "max": 5.0,
+        "median": 2.0,
+        "integer": true
+      },
+      "JobSatisfaction": {
+        "min": 1.0,
+        "max": 4.0,
+        "median": 3.0,
+        "integer": true
+      },
+      "MonthlyIncome": {
+        "min": 1009.0,
+        "max": 19999.0,
+        "median": 4919.0,
+        "integer": true
+      },
+      "MonthlyRate": {
+        "min": 2094.0,
+        "max": 26999.0,
+        "median": 14235.5,
+        "integer": true
+      },
+      "NumCompaniesWorked": {
+        "min": 0.0,
+        "max": 9.0,
+        "median": 2.0,
+        "integer": true
+      },
+      "PercentSalaryHike": {
+        "min": 11.0,
+        "max": 25.0,
+        "median": 14.0,
+        "integer": true
+      },
+      "PerformanceRating": {
+        "min": 3.0,
+        "max": 4.0,
+        "median": 3.0,
+        "integer": true
+      },
+      "RelationshipSatisfaction": {
+        "min": 1.0,
+        "max": 4.0,
+        "median": 3.0,
+        "integer": true
+      },
+      "StockOptionLevel": {
+        "min": 0.0,
+        "max": 3.0,
+        "median": 1.0,
+        "integer": true
+      },
+      "TotalWorkingYears": {
+        "min": 0.0,
+        "max": 40.0,
+        "median": 10.0,
+        "integer": true
+      },
+      "TrainingTimesLastYear": {
+        "min": 0.0,
+        "max": 6.0,
+        "median": 3.0,
+        "integer": true
+      },
+      "WorkLifeBalance": {
+        "min": 1.0,
+        "max": 4.0,
+        "median": 3.0,
+        "integer": true
+      },
+      "YearsAtCompany": {
+        "min": 0.0,
+        "max": 40.0,
+        "median": 5.0,
+        "integer": true
+      },
+      "YearsInCurrentRole": {
+        "min": 0.0,
+        "max": 18.0,
+        "median": 3.0,
+        "integer": true
+      },
+      "YearsSinceLastPromotion": {
+        "min": 0.0,
+        "max": 15.0,
+        "median": 1.0,
+        "integer": true
+      },
+      "YearsWithCurrManager": {
+        "min": 0.0,
+        "max": 17.0,
+        "median": 3.0,
+        "integer": true
+      }
+    },
+    "categorical": {
+      "BusinessTravel": {
+        "options": [
+          "Non-Travel",
+          "Travel_Frequently",
+          "Travel_Rarely"
+        ],
+        "mode": "Travel_Rarely"
+      },
+      "Department": {
+        "options": [
+          "Human Resources",
+          "Research & Development",
+          "Sales"
+        ],
+        "mode": "Research & Development"
+      },
+      "EducationField": {
+        "options": [
+          "Human Resources",
+          "Life Sciences",
+          "Marketing",
+          "Medical",
+          "Other",
+          "Technical Degree"
+        ],
+        "mode": "Life Sciences"
+      },
+      "JobRole": {
+        "options": [
+          "Healthcare Representative",
+          "Human Resources",
+          "Laboratory Technician",
+          "Manager",
+          "Manufacturing Director",
+          "Research Director",
+          "Research Scientist",
+          "Sales Executive",
+          "Sales Representative"
+        ],
+        "mode": "Sales Executive"
+      },
+      "OverTime": {
+        "options": [
+          "No",
+          "Yes"
+        ],
+        "mode": "No"
+      }
+    }
+  },
+  "base_rate": 0.1612,
+  "oof_quantiles": [
+    0.00031,
+    0.00251,
+    0.00337,
+    0.00449,
+    0.00545,
+    0.00647,
+    0.00702,
+    0.00769,
+    0.00887,
+    0.00998,
+    0.01061,
+    0.01137,
+    0.01244,
+    0.0131,
+    0.01418,
+    0.01513,
+    0.01671,
+    0.01771,
+    0.01897,
+    0.0201,
+    0.02135,
+    0.02225,
+    0.02349,
+    0.02516,
+    0.02621,
+    0.02769,
+    0.02885,
+    0.03019,
+    0.03233,
+    0.0337,
+    0.03576,
+    0.03724,
+    0.04093,
+    0.04396,
+    0.04598,
+    0.04871,
+    0.05076,
+    0.05238,
+    0.05445,
+    0.05729,
+    0.05846,
+    0.06045,
+    0.06314,
+    0.06482,
+    0.0674,
+    0.07181,
+    0.07555,
+    0.07855,
+    0.08105,
+    0.08604,
+    0.08952,
+    0.09284,
+    0.09589,
+    0.09881,
+    0.10185,
+    0.1048,
+    0.10825,
+    0.11548,
+    0.11904,
+    0.12482,
+    0.12902,
+    0.13709,
+    0.14391,
+    0.14836,
+    0.15199,
+    0.15969,
+    0.1667,
+    0.1709,
+    0.17782,
+    0.18221,
+    0.19253,
+    0.19837,
+    0.20803,
+    0.21554,
+    0.22377,
+    0.22956,
+    0.23663,
+    0.24615,
+    0.25777,
+    0.27135,
+    0.28514,
+    0.29607,
+    0.31,
+    0.316,
+    0.32519,
+    0.33741,
+    0.35828,
+    0.37774,
+    0.38951,
+    0.40961,
+    0.43427,
+    0.45567,
+    0.47827,
+    0.51139,
+    0.5381,
+    0.56947,
+    0.60434,
+    0.66213,
+    0.71382,
+    0.77738,
+    0.93403
+  ]
+}
