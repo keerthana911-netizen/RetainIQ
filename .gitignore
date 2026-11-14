@@ -1,0 +1,10 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+.DS_Store
+# The Kaggle CSV is not redistributed; model/train.py downloads a public copy on first run.
+data/
