@@ -1,8 +1,20 @@
-**Live demo:** https://retain-iq-delta.vercel.app · **API:** https://retainiq-backend-gmqx.onrender.com/health
-
 # 🔴 RetainIQ: explainable employee attrition risk
 
 > Know **who** might leave and **why**, with honest evaluation instead of a lone accuracy number.
+
+<p align="center">
+  <a href="https://retain-iq-delta.vercel.app"><img src="https://img.shields.io/badge/🚀_Live_Demo-Frontend-ff4d5e?style=for-the-badge" alt="Live demo"></a>
+  <a href="https://retainiq-backend-gmqx.onrender.com"><img src="https://img.shields.io/badge/⚙️_Live_API-Backend-2fbf8f?style=for-the-badge" alt="Live API"></a>
+  <a href="https://retainiq-backend-gmqx.onrender.com/model-card"><img src="https://img.shields.io/badge/📊_Model_Card-JSON-4c78a8?style=for-the-badge" alt="Model card"></a>
+</p>
+
+| | Link |
+|---|---|
+| **Frontend (UI)** | https://retain-iq-delta.vercel.app |
+| **Backend (API)** | https://retainiq-backend-gmqx.onrender.com |
+| **API health check** | https://retainiq-backend-gmqx.onrender.com/health |
+
+> ⏳ The API runs on Render's free tier and sleeps when idle. The first visit can take about 30 seconds to wake up; after that it's fast.
 
 React + Flask + scikit-learn + SHAP · Dockerised · CI-tested
 
@@ -112,7 +124,7 @@ pip install -r model/requirements.txt && python model/train.py
 
 ## Deploy
 
-- **API → Render:** New → Blueprint → select this repo (uses `render.yaml`, Docker). Free tier sleeps when idle; the UI retries while it wakes.
+- **API → Render** (live at https://retainiq-backend-gmqx.onrender.com): New → Blueprint → select this repo (uses `render.yaml`, Docker). Free tier sleeps when idle; the UI retries while it wakes.
 - **UI → Vercel:** root directory `frontend`, env var `VITE_API_URL=https://<your-service>.onrender.com`. Then set `ALLOWED_ORIGINS` on Render to your Vercel domain.
 
 ## Project layout
@@ -138,6 +150,3 @@ The deployed model was a Random Forest while the README described Logistic Regre
 ## Author
 
 Built by [Keerthana](https://github.com/keerthana911-netizen). Data: IBM HR Analytics Employee Attrition & Performance (Kaggle, `pavansubhasht`).
-
-Live demo: https://retain-ajk0u8zdp-keerthanalahari2-4968s-projects.vercel.app/
-**API:** https://retainiq-backend-gmqx.onrender.com/health
