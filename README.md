@@ -1,3 +1,5 @@
+**Live demo:** https://retain-iq-delta.vercel.app · **API:** https://retainiq-backend-gmqx.onrender.com/health
+
 # 🔴 RetainIQ: explainable employee attrition risk
 
 > Know **who** might leave and **why**, with honest evaluation instead of a lone accuracy number.
@@ -136,3 +138,6 @@ The deployed model was a Random Forest while the README described Logistic Regre
 ## Author
 
 Built by [Keerthana](https://github.com/keerthana911-netizen). Data: IBM HR Analytics Employee Attrition & Performance (Kaggle, `pavansubhasht`).
+
+Live demo: https://retain-ajk0u8zdp-keerthanalahari2-4968s-projects.vercel.app/
+**API:** https://retainiq-backend-gmqx.onrender.com/health
