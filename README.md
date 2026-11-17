@@ -34,6 +34,10 @@ React + Flask + scikit-learn + SHAP · Dockerised · CI-tested
 4. **What-if tool.** Change overtime, income, stock options, travel, work-life balance… and watch risk move, plus a sensitivity curve.
 5. **Ships.** Docker, docker-compose, CI, a Render blueprint and a Vercel-ready frontend.
 
+## Dataset note
+
+> This is IBM's fictional HR Analytics dataset (1,470 employees). Results describe this data, not real companies, and show associations, not causes.
+
 ## Results
 
 Dataset: IBM HR Analytics (1,470 employees, 16.1% attrition). Stratified 80/20 split; hyper-parameters tuned by randomized search on the training split only; the test set (294 employees, 47 leavers) is used once for reporting.
